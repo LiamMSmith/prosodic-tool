@@ -1,0 +1,40 @@
+###################### Input ######################
+
+# input text
+text = Making a famine where abundance lies
+input_file = text.txt
+respect_new_lines = True
+
+# metrical constraints
+w_stress = True
+s_unstress = True
+unres_within = True
+unres_across = True
+s_trough = False
+w_peak = True
+
+# additional constraints
+max_s = 2
+max_w = 2
+foot_size = True
+
+# meter filters
+meter = None
+pentameter = False
+
+resolve_optionality = True
+exhaustive = False
+
+# sentence processing preferences
+min_syllables = 7
+max_syllables = 10
+window = middle
+
+
+###################### Output ######################
+output_file = output.csv
+include_sums = True
+MU = True
+MTS = True
+collapse_parses = True
+include_norms = False
