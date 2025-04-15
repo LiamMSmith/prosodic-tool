@@ -123,7 +123,7 @@ def process_text(settings):
 
     def split_into_sentences(text_block):
         if settings.get("respect_new_lines", False):
-            split_pattern = r'[.?!;\[\]\n]+'
+            split_pattern = r'[\n]+'
         else:
             split_pattern = r'[.?!;\[\]]+'
         lines = re.split(split_pattern, text_block)
@@ -156,10 +156,12 @@ def process_text(settings):
 
     processed_lines = []
     skipped_count = 0
+    for line in lines_to_parse:
+        print(line)
 
-    for line_text in lines_to_parse:
+    for i, original_line_text in enumerate(lines_to_parse):
         # Tokenize the line into words (alphanumeric + apostrophes)
-        word_tokens = re.findall(r"\b[\w’']+\b", line_text)
+        word_tokens = re.findall(r"\b[\w’']+\b", original_line_text)
 
         # Create a TextModel for each word and get syllable counts
         syllable_counts = []
@@ -172,11 +174,11 @@ def process_text(settings):
                 model = prosodic.TextModel(txt=word).wordtype1
                 if model.num_sylls is None:
                     skip_line = True
-                    print(f"⚠️ Skipping line due to unknown word (no syllables): '{word}' in → {line_text}")
+                    print(f"⚠️ Skipping line due to unknown word (no syllables): '{word}' in → {original_line_text}")
                     break
                 syllable_counts.append(model.num_sylls)
             except Exception as e:
-                print(f"⚠️ Skipping line due to error with word '{word}': {e} → {line_text}")
+                print(f"⚠️ Skipping line due to error with word '{word}': {e} → {original_line_text}")
                 skip_line = True
                 break
 
@@ -242,9 +244,8 @@ def process_text(settings):
             new_line_text = ' '.join(selected_words)
         else:
             new_line_text = ' '.join(word_tokens)
-
-        processed_lines.append(new_line_text)
-
+        
+        processed_lines.append((i + 1, original_line_text, new_line_text))
 
     if not processed_lines:
         raise ValueError("❌ No lines met the max and min syllable criteria. Adjust min_syllables or check input text.")
@@ -258,8 +259,8 @@ def run_parse(settings, output_csv):
     meter_filter = settings.get("meter", None)
     pentameter = settings.get("pentameter", False)
 
-    for line_text in lines_to_parse:
-        text_obj = prosodic.TextModel(line_text)
+    for input_index, original_line, processed_line in lines_to_parse:
+        text_obj = prosodic.TextModel(processed_line)
         if not settings.get("exhaustive", False):
             try:
                 parsed_obj = text_obj.parse(
@@ -270,7 +271,7 @@ def run_parse(settings, output_csv):
                     exhaustive=settings.get("exhaustive", False)
                 )
             except AssertionError:
-                print(f"⚠️ Skipping line due to empty parse: {line_text}")
+                print(f"⚠️ Skipping line due to empty parse: {processed_line}")
                 continue
         else:
             meter = prosodic.Meter(
@@ -282,7 +283,7 @@ def run_parse(settings, output_csv):
             try:
                 parsed_obj = [meter.parse_exhaustive(text_obj)]
             except Exception as e:
-                print(f"⚠️ Skipping line (exhaustive parse error): {line_text} → {e}")
+                print(f"⚠️ Skipping line (exhaustive parse error): {processed_line} → {e}")
                 continue
 
         for parselist in parsed_obj:
@@ -294,17 +295,15 @@ def run_parse(settings, output_csv):
                 if pentameter and parse.num_peaks != 5:
                     continue
 
-                parsed_line = parse.line or prosodic.Line(line_text)
+                parsed_line = parse.line or prosodic.Line(processed_line)
                 resd = parse.stats_d()
                 # html = parsed_line.to_html(parse=parse, blockquote=False, as_str=True, tooltip=True)
 
-                for wordtoken in parse.wordtokens:
-                    print (wordtoken.txt)
-
                 row = [
+                    input_index,
                     getattr(getattr(parsed_line, "stanza", None), "num", ""),
                     getattr(parsed_line, "num", ""),
-                    parsed_line.txt,
+                    original_line,
                     parse.parse_rank,
                     parse.txt,
                     parse.meter_str,
@@ -319,7 +318,7 @@ def run_parse(settings, output_csv):
                 ] + [
                     round(resd.get(f"*{c}_norm", 0), 2) for c in ALL_CONSTRAINTS
                 ] + [
-                    line_text
+                    processed_line
                 ]
 
                 row = ['' if x is None else x for x in row]
@@ -327,7 +326,7 @@ def run_parse(settings, output_csv):
 
     # Header construction
     base_cols = [
-        "stanza_num", "line_num", "line_txt", "parse_rank",
+        "input_index", "stanza_num", "line_num", "line_txt", "parse_rank",
         "parse_txt", "parse_meter", "parse_stress",
         "parse_score", "parse_num_viols",
         "parse_ambig", "parse_num_sylls", "parse_num_words"
@@ -337,7 +336,6 @@ def run_parse(settings, output_csv):
     header = base_cols + constraint_cols + norm_constraint_cols + ["source_text"]
 
     final_df = pd.DataFrame(all_rows, columns=header)
-    final_df.to_csv(output_csv, index=False)
 
     # Get unique line_texts that contributed to parses
     parsed_lines_count = len(set(row[-1] for row in all_rows))
@@ -352,11 +350,30 @@ def process_output(df, settings):
 
     df = df.copy()
     constraint_cols = [col for col in df.columns if col.startswith("*")]
-    df["text_id"] = df["source_text"].astype("category").cat.codes + 1
 
-    # Assign a parse number within each sentence group
-    df["parse_num"] = df.groupby("text_id").cumcount() + 1
-    df["parse_id"] = df["text_id"].astype(str) + "." + df["parse_num"].astype(str)
+    # --- MU (number of parses) ---
+    if settings.get("MU"):
+        df["MU"] = df.groupby("source_text")["input_index"].transform("count")
+
+    # --- MTS (sum of all violations) ---
+    if settings.get("MTS"):
+        df["MTS"] = df.groupby("input_index")["parse_score"].transform("sum").astype(int)
+    
+    
+    # --- collapse_parses (keep only best parse per sentence) ---
+    if settings.get("collapse_parses"):
+        # Collapse to the best-ranked parse (lowest parse_rank)
+        df = df.loc[df.groupby("input_index")["parse_rank"].idxmin()].reset_index(drop=True)
+
+        # Assign parse_id = input_index (as string, 1-indexed)
+        df["parse_id"] = (df["input_index"]).astype(str)
+
+        # Drop parse_rank column (no longer meaningful post-collapse)
+        df = df.drop(columns=["parse_rank"], errors="ignore")
+
+    else:
+        # parse_id = input_index + .1, .2, .3 etc.
+        df["parse_id"] = df["input_index"].astype(str) + "." + df["parse_rank"].astype(str)
 
     # --- include_sums ---
     if settings.get("include_sums"):
@@ -385,23 +402,6 @@ def process_output(df, settings):
 
         df = df[new_col_order]
 
-    # --- MU (number of parses) ---
-    if settings.get("MU"):
-        df["MU"] = df.groupby("source_text")["parse_id"].transform("count")
-
-    # --- MTS (sum of all violations) ---
-    if settings.get("MTS"):
-        df["MTS"] = df.groupby("source_text")["parse_score"].transform("sum").astype(int)
-
-    # --- collapse_parses (keep only best parse per sentence) ---
-    if settings.get("collapse_parses"):
-        if "MTS" not in df.columns:
-            df["MTS"] = df[constraint_cols].sum(axis=1)
-        df = df.loc[df.groupby("source_text")["MTS"].idxmin()].reset_index(drop=True)
-
-        # Reassign parse_id as simple integers (1, 2, 3, ...)
-        df["parse_id"] = (df.index + 1).astype(str)
-
     # --- Remove unwanted columns ---
     cols_to_remove = [
         "stanza_num", "line_num", "parse_ambig", "parse_is_bounded",
@@ -429,6 +429,26 @@ def process_output(df, settings):
         cols = df.columns.tolist()
         cols.insert(0, cols.pop(cols.index("parse_id")))
         df = df[cols]
+
+    if "parse_id" in df.columns:
+        # Split parse_id into two numeric parts (even if collapsed, it works)
+        parse_parts = df["parse_id"].str.split(".", expand=True)
+
+        # Always treat the first part as input_index
+        df["_input_index"] = parse_parts[0].astype(int)
+
+        # If there's a second column, use it as parse rank
+        if parse_parts.shape[1] > 1:
+            df["_parse_rank"] = parse_parts[1].astype(int)
+        else:
+            df["_parse_rank"] = 0  # default for collapsed parses
+
+        # Sort by input_index then parse rank
+        df = df.sort_values(by=["_input_index", "_parse_rank"]).reset_index(drop=True)
+
+        # Drop the helper columns
+        df = df.drop(columns=["_input_index", "_parse_rank", "input_index"])
+
 
     return df
 

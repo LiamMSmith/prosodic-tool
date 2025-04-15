@@ -1,0 +1,140 @@
+parse_id,line_txt,parse_rank,parse_txt,parse_meter,parse_stress,parse_score,parse_num_viols,parse_num_sylls,parse_num_words,*w_stress,*w_stress_sum,*s_unstress,*s_unstress_sum,*unres_within,*unres_within_sum,*unres_across,*unres_across_sum,*w_peak,*w_peak_sum,*s_trough,*s_trough_sum,MU,MTS
+1.1,"To be, or not to be, that is the question:",1,to BE or NOT to.be THAT is.the QUES tion,-+-+--+--+-,-+-+--+--+-,0,0,11,10,0,0,0,1,0,0,0,0,0,0,0,0,2,1
+1.2,"To be, or not to be, that is the question:",2,to BE or NOT to BE that IS the QUES tion,-+-+-+-+-+-,-+-+-+---+-,1,3,11,10,0,0,1,1,0,0,0,0,0,0,0,0,2,1
+2.1,Whether ’tis nobler in the mind to suffer,1,WHET her TIS nobler IN the MIND to SUF fer,+-+-+-+-+-,+-+++-+-+-,1,3,10,8,1,4,0,1,0,1,0,1,0,1,0,0,4,8
+2.2,Whether ’tis nobler in the mind to suffer,2,WHET her TIS.NOBLER in.the MIND to SUF fer,+-++--+-+-,+-++--+-+-,1,3,10,8,0,4,0,1,0,1,1,1,0,1,0,0,4,8
+2.3,Whether ’tis nobler in the mind to suffer,3,WHET her TIS nobler IN the MIND to SUF.FER,+-+-+-+-++,+-+++-+-+-,2,6,10,8,1,4,1,1,0,1,0,1,0,1,0,0,4,8
+2.4,Whether ’tis nobler in the mind to suffer,4,whet.her TIS nobler IN the MIND to SUF fer,--+-+-+-+-,+-+++-+-+-,4,12,10,8,2,4,0,1,1,1,0,1,1,1,0,0,4,8
+3.1,"The slings and arrows of outrageous fortune,",1,the SLINGS and AR rows OF ou TRA geous FOR tune,-+-+-+-+-+-,-+-+---+-+-,1,3,11,7,0,2,1,10,0,2,0,1,0,2,0,0,5,17
+3.2,"The slings and arrows of outrageous fortune,",2,the SLINGS and AR.ROWS of.ou TRA geous FOR tune,-+-++--+-+-,-+-+---+-+-,2,6,11,7,0,2,1,10,0,2,1,1,0,2,0,0,5,17
+3.3,"The slings and arrows of outrageous fortune,",3,the SLINGS and AR rows OF ou TRA geous FOR.TUNE,-+-+-+-+-++,-+-+---+-+-,3,8,11,7,0,2,2,10,1,2,0,1,0,2,0,0,5,17
+3.4,"The slings and arrows of outrageous fortune,",4,the SLINGS and AR.ROWS of OU.TRA geous FOR tune,-+-++-++-+-,-+-+---+-+-,3,9,11,7,0,2,2,10,1,2,0,1,0,2,0,0,5,17
+3.5,"The slings and arrows of outrageous fortune,",5,the SLINGS and AR.ROWS of OU tra GEOUS for TUNE,-+-++-+-+-+,-+-+---+-+-,8,24,11,7,2,2,4,10,0,2,0,1,2,2,0,0,5,17
+4.1,"Or to take arms against a sea of troubles,",1,or.to TAKE.ARMS a GAINST a SEA of TROU bles,--++-+-+-+-,--++-+-+-+-,1,3,11,9,0,3,0,4,0,1,1,1,0,0,0,0,4,9
+4.2,"Or to take arms against a sea of troubles,",2,or TO take ARMS a GAINST a SEA of TROU bles,-+-+-+-+-+-,--++-+-+-+-,2,6,11,9,1,3,1,4,0,1,0,1,0,0,0,0,4,9
+4.3,"Or to take arms against a sea of troubles,",3,or TO take ARMS a GAINST a SEA of TROU.BLES,-+-+-+-+-++,--++-+-+-+-,3,9,11,9,1,3,2,4,0,1,0,1,0,0,0,0,4,9
+4.4,"Or to take arms against a sea of troubles,",4,or.to TAKE arms A.GAINST a SEA of TROU bles,--+-++-+-+-,--++-+-+-+-,3,9,11,9,1,3,1,4,1,1,0,1,0,0,0,0,4,9
+5.1,"And by opposing end them? To die—to sleep,",1,and BY op PO sing END them.to DIE to SLEEP,-+-+-+--+-+,---+-+--+-+,1,3,11,9,0,2,1,4,0,0,0,0,0,0,0,0,2,6
+5.2,"And by opposing end them? To die—to sleep,",2,and BY op PO sing END them TO die TO sleep,-+-+-+-+-+-,---+-+--+-+,5,16,11,9,2,2,3,4,0,0,0,0,0,0,0,0,2,6
+6.1,No more; and by a sleep to say we end,1,NO more.and BY a SLEEP to SAY we END,+--+-+-+-+,+----+-+-+,1,3,10,10,0,3,1,6,0,0,0,0,0,0,0,0,3,9
+6.2,No more; and by a sleep to say we end,2,NO more AND by.a SLEEP to SAY we END,+-+--+-+-+,+----+-+-+,1,3,10,10,0,3,1,6,0,0,0,0,0,0,0,0,3,9
+6.3,No more; and by a sleep to say we end,3,NO more AND by A sleep TO say WE end,+-+-+-+-+-,+----+-+-+,7,23,10,10,3,3,4,6,0,0,0,0,0,0,0,0,3,9
+7.1,"The heart-ache, and the thousand natural shocks",1,the HEART.ACHE and.the THOU sand NA tural SHOCKS,-++--+-+-+,-++--+-+-+,1,3,10,8,0,2,0,2,0,0,1,1,0,0,0,0,3,5
+7.2,"The heart-ache, and the thousand natural shocks",2,the HEART ache AND the THOU sand NA tural SHOCKS,-+-+-+-+-+,-++--+-+-+,2,6,10,8,1,2,1,2,0,0,0,1,0,0,0,0,3,5
+7.3,"The heart-ache, and the thousand natural shocks",3,THE heart ACHE and.the THOU sand NA tural SHOCKS,+-+--+-+-+,-++--+-+-+,2,6,10,8,1,2,1,2,0,0,0,1,0,0,0,0,3,5
+8.1,That flesh is heir to: ’tis a consummation,1,that FLESH is HEIR to TIS a CON sum MA tion,-+-+-+-+-+-,-+-+-+-+-+-,0,0,11,8,0,0,0,1,0,1,0,1,0,0,0,0,3,3
+8.2,That flesh is heir to: ’tis a consummation,2,THAT.FLESH is HEIR to TIS a CON sum MA tion,++-+-+-+-+-,++-+-+-+-+-,1,3,11,8,0,0,0,1,0,1,1,1,0,0,0,0,3,3
+8.3,That flesh is heir to: ’tis a consummation,3,that FLESH is HEIR to TIS a CON sum MA.TION,-+-+-+-+-++,-+-+-+-+-+-,2,5,11,8,0,0,1,1,1,1,0,1,0,0,0,0,3,3
+9.1,"Devoutly to be wish’d. To die, to sleep.",1,de VOU tly TO be WISH'D to DIE to SLEEP,-+-+-+-+-+,-+---+-+-+,1,3,10,8,0,2,1,5,0,1,0,3,0,1,0,0,5,12
+9.2,"Devoutly to be wish’d. To die, to sleep.",2,de VOU tly.to BE.WISH'D to DIE to SLEEP,-+--++-+-+,-+--++-+-+,2,6,10,8,0,2,0,5,0,1,2,3,0,1,0,0,5,12
+9.3,"Devoutly to be wish’d. To die, to sleep.",3,de VOU.TLY to.be WISH'D to DIE to SLEEP,-++--+-+-+,-+---+-+-+,2,5,10,8,0,2,1,5,1,1,0,3,0,1,0,0,5,12
+9.4,"Devoutly to be wish’d. To die, to sleep.",4,de VOU tly TO be WISH'D to DIE to.sleep,-+-+-+-+--,-+---+-+-+,3,8,10,8,1,2,1,5,0,1,1,3,0,1,0,0,5,12
+9.5,"Devoutly to be wish’d. To die, to sleep.",5,DE vou TLY to.be WISH'D to DIE to SLEEP,+-+--+-+-+,-+---+-+-+,4,12,10,8,1,2,2,5,0,1,0,3,1,1,0,0,5,12
+10.1,"To sleep, perchance to dream—ay, there’s the rub,",1,to SLEEP.PERC hance TO dream AY there's.the RUB,-++-+-+--+,-++--++--+,3,9,10,9,1,8,1,7,0,1,1,4,0,1,0,0,5,21
+10.2,"To sleep, perchance to dream—ay, there’s the rub,",2,to SLEEP.PERC hance.to DREAM.AY there's.the RUB,-++--++--+,-++--++--+,3,9,10,9,0,8,0,7,0,1,3,4,0,1,0,0,5,21
+10.3,"To sleep, perchance to dream—ay, there’s the rub,",3,TO sleep PERC hance TO dream AY there's.the RUB,+-+-+-+--+,-++--++--+,4,13,10,9,2,8,2,7,0,1,0,4,0,1,0,0,5,21
+10.4,"To sleep, perchance to dream—ay, there’s the rub,",4,to SLEEP perc.hance TO dream AY there's.the RUB,-+--+-+--+,-++--++--+,5,15,10,9,2,8,1,7,1,1,0,4,1,1,0,0,5,21
+10.5,"To sleep, perchance to dream—ay, there’s the rub,",5,TO sleep PERC hance TO dream AY there's THE rub,+-+-+-+-+-,-++--++--+,6,19,10,9,3,8,3,7,0,1,0,4,0,1,0,0,5,21
+11.1,"For in that sleep of death what dreams may come,",1,for IN that SLEEP of DEATH what DREAMS may COME,-+-+-+-+-+,-+-+-+-+-+,0,0,10,10,0,0,0,1,0,0,0,1,0,0,0,0,3,2
+11.2,"For in that sleep of death what dreams may come,",2,for.in THAT.SLEEP of DEATH what DREAMS may COME,--++-+-+-+,--++-+-+-+,1,3,10,10,0,0,0,1,0,0,1,1,0,0,0,0,3,2
+11.3,"For in that sleep of death what dreams may come,",3,FOR in.that SLEEP of DEATH what DREAMS may COME,+--+-+-+-+,---+-+-+-+,1,3,10,10,0,0,1,1,0,0,0,1,0,0,0,0,3,2
+12.1,"When we have shuffled off this mortal coil,",1,WHEN we.have SHUF fled OFF this MOR tal COIL,+--+-+-+-+,+--+---+-+,1,3,10,8,0,0,1,4,0,0,0,0,0,0,0,0,3,4
+12.2,"When we have shuffled off this mortal coil,",2,WHEN we.have SHUF.FLED off.this MOR tal COIL,+--++--+-+,+--+---+-+,1,3,10,8,0,0,1,4,0,0,0,0,0,0,0,0,3,4
+12.3,"When we have shuffled off this mortal coil,",3,when WE have SHUF fled OFF this MOR tal COIL,-+-+-+-+-+,---+---+-+,2,6,10,8,0,0,2,4,0,0,0,0,0,0,0,0,3,4
+13.1,Must give us pause. There’s the respect,1,must GIVE us PAUSE there's THE res PECT,-+-+-+-+,-+-+---+,1,3,8,7,0,1,1,4,0,1,0,3,0,1,0,0,4,10
+13.2,Must give us pause. There’s the respect,2,must GIVE us PAUSE there's.the RES.PECT,-+-+--++,-+-+---+,2,6,8,7,0,1,1,4,1,1,0,3,0,1,0,0,4,10
+13.3,Must give us pause. There’s the respect,3,must GIVE us PAUSE there's.the RES pect,-+-+--+-,-+-+---+,3,9,8,7,1,1,1,4,0,1,0,3,1,1,0,0,4,10
+13.4,Must give us pause. There’s the respect,4,MUST.GIVE us PAUSE.THERE'S the.res PECT,++-++--+,++-+---+,4,12,8,7,0,1,1,4,0,1,3,3,0,1,0,0,4,10
+14.1,That makes calamity of so long life.,1,that MAKES ca LA mi TY of.so LONG life,-+-+-+--+-,-+-+----++,2,6,10,7,1,2,1,4,0,0,0,1,0,0,0,0,3,7
+14.2,That makes calamity of so long life.,2,that MAKES ca LA mi TY of.so LONG.LIFE,-+-+-+--++,-+-+----++,2,6,10,7,0,2,1,4,0,0,1,1,0,0,0,0,3,7
+14.3,That makes calamity of so long life.,3,that MAKES ca LA mi TY of SO long LIFE,-+-+-+-+-+,-+-+----++,3,9,10,7,1,2,2,4,0,0,0,1,0,0,0,0,3,7
+15.1,"For who would bear the whips and scorns of time,",1,for WHO would BEAR the WHIPS and SCORNS of TIME,-+-+-+-+-+,-+-+-+-+-+,0,0,10,10,0,0,0,1,0,0,0,1,0,0,0,0,3,2
+15.2,"For who would bear the whips and scorns of time,",2,for.who WOULD.BEAR the WHIPS and SCORNS of TIME,--++-+-+-+,--++-+-+-+,1,3,10,10,0,0,0,1,0,0,1,1,0,0,0,0,3,2
+15.3,"For who would bear the whips and scorns of time,",3,FOR who.would BEAR the WHIPS and SCORNS of TIME,+--+-+-+-+,---+-+-+-+,1,3,10,10,0,0,1,1,0,0,0,1,0,0,0,0,3,2
+16.1,"The oppressor’s wrong, the proud man’s contumely,",1,the.op PRESSOR'S.WRONG the PROUD.MAN'S con TU mely,--++-++-+-,--++-++-+-,3,9,10,7,0,9,0,12,0,2,3,7,0,1,0,0,7,31
+16.2,"The oppressor’s wrong, the proud man’s contumely,",2,THE op PRESSOR'S.WRONG the PROUD.MAN'S con TU mely,+-++-++-+-,--++-++-+-,3,9,10,7,0,9,1,12,0,2,2,7,0,1,0,0,7,31
+16.3,"The oppressor’s wrong, the proud man’s contumely,",3,THE op PRESSOR'S wrong THE proud MAN'S con TU mely,+-+-+-+-+-,--++-++-+-,4,13,10,7,2,9,2,12,0,2,0,7,0,1,0,0,7,31
+16.4,"The oppressor’s wrong, the proud man’s contumely,",4,THE op PRESSOR'S.WRONG the PROUD man's CON.TU mely,+-++-+-++-,--++-++-+-,5,16,10,7,1,9,2,12,1,2,1,7,0,1,0,0,7,31
+16.5,"The oppressor’s wrong, the proud man’s contumely,",5,the OP.PRESSOR'S wrong THE proud MAN'S con TU mely,-++-+-+-+-,--++-++-+-,5,16,10,7,2,9,2,12,1,2,0,7,0,1,0,0,7,31
+16.6,"The oppressor’s wrong, the proud man’s contumely,",6,THE op PRESSOR'S wrong THE proud MAN'S con TU.MELY,+-+-+-+-++,--++-++-+-,5,16,10,7,2,9,3,12,0,2,0,7,0,1,0,0,7,31
+16.7,"The oppressor’s wrong, the proud man’s contumely,",7,THE op PRESSOR'S.WRONG the PROUD man's CON tu.mely,+-++-+-+--,--++-++-+-,6,18,10,7,2,9,2,12,0,2,1,7,1,1,0,0,7,31
+17.1,"The pangs of dispriz’d love, the law’s delay,",1,the PANGS of.dis PRIZ'D.LOVE the LAW'S de LAY,-+--++-+-+,-+--++-+-+,2,6,10,8,0,14,0,13,0,5,2,5,0,7,0,0,8,44
+17.2,"The pangs of dispriz’d love, the law’s delay,",2,the PANGS of DIS priz'd LOVE the LAW'S de LAY,-+-+-+-+-+,-+--++-+-+,3,8,10,8,1,14,1,13,0,5,0,5,1,7,0,0,8,44
+17.3,"The pangs of dispriz’d love, the law’s delay,",3,the PANGS of DIS.PRIZ'D love.the LAW'S de LAY,-+-++--+-+,-+--++-+-+,4,13,10,8,1,14,1,13,1,5,1,5,0,7,0,0,8,44
+17.4,"The pangs of dispriz’d love, the law’s delay,",4,the PANGS of DIS.PRIZ'D love THE law's DE.LAY,-+-++-+-++,-+--++-+-+,7,23,10,8,2,14,3,13,2,5,0,5,0,7,0,0,8,44
+17.5,"The pangs of dispriz’d love, the law’s delay,",5,the PANGS of DIS priz'd LOVE the LAW'S de.lay,-+-+-+-+--,-+--++-+-+,6,16,10,8,2,14,1,13,1,5,0,5,2,7,0,0,8,44
+17.6,"The pangs of dispriz’d love, the law’s delay,",6,the PANGS of.dis PRIZ'D love THE law's DE lay,-+--+-+-+-,-+--++-+-+,7,22,10,8,3,14,2,13,0,5,1,5,1,7,0,0,8,44
+17.7,"The pangs of dispriz’d love, the law’s delay,",7,the PANGS of DIS priz'd LOVE the LAW'S.DE lay,-+-+-+-++-,-+--++-+-+,7,19,10,8,2,14,2,13,0,5,1,5,2,7,0,0,8,44
+17.8,"The pangs of dispriz’d love, the law’s delay,",8,the PANGS of DIS.PRIZ'D love THE law's DE lay,-+-++-+-+-,-+--++-+-+,8,25,10,8,3,14,3,13,1,5,0,5,1,7,0,0,8,44
+18.1,"The insolence of office, and the spurns",1,the IN so LENCE of OF fice AND the SPURNS,-+-+-+-+-+,-+---+---+,2,6,10,7,0,0,2,4,0,0,0,0,0,0,0,0,2,4
+18.2,"The insolence of office, and the spurns",2,the IN so LENCE of OF.FICE and.the SPURNS,-+-+-++--+,-+---+---+,2,6,10,7,0,0,2,4,0,0,0,0,0,0,0,0,2,4
+19.1,"That patient merit of the unworthy takes,",1,that PA tient ME rit.of THE un WORT hy TAKES,-+-+--+-+-+,-+-+----+-+,2,6,11,7,0,2,1,9,0,0,1,3,0,1,0,0,5,15
+19.2,"That patient merit of the unworthy takes,",2,that PA tient ME rit OF the.un WORT hy TAKES,-+-+-+--+-+,-+-+----+-+,2,6,11,7,0,2,1,9,0,0,1,3,0,1,0,0,5,15
+19.3,"That patient merit of the unworthy takes,",3,that PA tient ME.RIT of THE un WORT hy TAKES,-+-++-+-+-+,-+-+----+-+,2,6,11,7,0,2,2,9,0,0,0,3,0,1,0,0,5,15
+19.4,"That patient merit of the unworthy takes,",4,that PA tient ME rit OF.THE un WORT hy TAKES,-+-+-++-+-+,-+-+----+-+,3,8,11,7,0,2,2,9,0,0,1,3,0,1,0,0,5,15
+19.5,"That patient merit of the unworthy takes,",5,that PA tient ME rit OF the UN wort HY takes,-+-+-+-+-+-,-+-+----+-+,6,18,11,7,2,2,3,9,0,0,0,3,1,1,0,0,5,15
+20.1,When he himself might his quietus make,1,when HE him SELF might.his QUI etus MAKE,-+-+--+-+,---+--+-+,1,3,9,7,0,2,1,4,0,0,0,1,0,1,0,0,3,8
+20.2,When he himself might his quietus make,2,WHEN he.him SELF might.his QUI etus MAKE,+--+--+-+,+--+--+-+,1,3,9,7,0,2,0,4,0,0,1,1,0,1,0,0,3,8
+20.3,When he himself might his quietus make,3,when HE him SELF might HIS qui ETUS make,-+-+-+-+-,---+--+-+,6,18,9,7,2,2,3,4,0,0,0,1,1,1,0,0,3,8
+21.1,"With a bare bodkin? Who would these fardels bear,",1,with.a BARE.BOD kin WHO would.these FAR dels BEAR,--++-+--+-+,--++-+--+-+,1,3,11,9,0,5,0,4,0,1,1,1,0,2,0,0,4,13
+21.2,"With a bare bodkin? Who would these fardels bear,",2,with A bare BOD kin WHO would.these FAR dels BEAR,-+-+-+--+-+,--++-+--+-+,2,6,11,9,1,5,1,4,0,1,0,1,0,2,0,0,4,13
+21.3,"With a bare bodkin? Who would these fardels bear,",3,with.a BARE bod.kin WHO would.these FAR dels BEAR,--+--+--+-+,--++-+--+-+,3,8,11,9,1,5,0,4,1,1,0,1,1,2,0,0,4,13
+21.4,"With a bare bodkin? Who would these fardels bear,",4,with A bare BOD kin WHO would THESE far DELS bear,-+-+-+-+-+-,--++-+--+-+,7,21,11,9,3,5,3,4,0,1,0,1,1,2,0,0,4,13
+22.1,"To grunt and sweat under a weary life,",1,to GRUNT and SWEAT.UN der.a WEA ry LIFE,-+-++--+-+,-+-++--+-+,2,6,10,8,0,8,0,6,0,4,2,4,0,5,0,0,6,27
+22.2,"To grunt and sweat under a weary life,",2,to GRUNT and SWEAT un DER a WEA ry LIFE,-+-+-+-+-+,-+-++--+-+,3,8,10,8,1,8,1,6,0,4,0,4,1,5,0,0,6,27
+22.3,"To grunt and sweat under a weary life,",3,to GRUNT and.sweat UN.DER a WEA ry LIFE,-+--++-+-+,-+-++--+-+,4,10,10,8,1,8,1,6,1,4,1,4,0,5,0,0,6,27
+22.4,"To grunt and sweat under a weary life,",4,to GRUNT and SWEAT un DER a WEA ry.life,-+-+-+-+--,-+-++--+-+,5,14,10,8,2,8,1,6,0,4,1,4,1,5,0,0,6,27
+22.5,"To grunt and sweat under a weary life,",5,to GRUNT and SWEAT un DER a WEA.RY life,-+-+-+-++-,-+-++--+-+,6,17,10,8,2,8,2,6,1,4,0,4,1,5,0,0,6,27
+22.6,"To grunt and sweat under a weary life,",6,to GRUNT and SWEAT un.der A wea.ry LIFE,-+-+--+--+,-+-++--+-+,7,20,10,8,2,8,1,6,2,4,0,4,2,5,0,0,6,27
+23.1,"But that the dread of something after death,",1,but THAT the DREAD of SO mething AF ter DEATH,-+-+-+-+-+,-+-+-+-+-+,0,0,10,8,0,1,0,1,0,0,0,1,0,0,0,0,3,3
+23.2,"But that the dread of something after death,",2,BUT that.the DREAD of SO mething AF ter DEATH,+--+-+-+-+,---+-+-+-+,1,3,10,8,0,1,1,1,0,0,0,1,0,0,0,0,3,3
+23.3,"But that the dread of something after death,",3,but THAT the DREAD of SO mething AF ter.death,-+-+-+-+--,-+-+-+-+-+,2,5,10,8,1,1,0,1,0,0,1,1,0,0,0,0,3,3
+24.1,"The undiscover’d country, from whose bourn",1,the UN dis COVER'D.COUN try FROM whose BOURN,-+-++-+-+,---++---+,3,10,9,6,0,4,2,8,0,0,1,6,0,2,0,0,5,20
+24.2,"The undiscover’d country, from whose bourn",2,the UN dis COVER'D coun TRY from.whose BOURN,-+-+-+--+,---++---+,4,12,9,6,1,4,2,8,0,0,0,6,1,2,0,0,5,20
+24.3,"The undiscover’d country, from whose bourn",3,the UN dis COVER'D.COUN try.from WHOSE bourn,-+-++--+-,---++--++,4,13,9,6,1,4,1,8,0,0,2,6,0,2,0,0,5,20
+24.4,"The undiscover’d country, from whose bourn",4,the UN dis COVER'D.COUN try.from WHOSE.BOURN,-+-++--++,---++--++,4,13,9,6,0,4,1,8,0,0,3,6,0,2,0,0,5,20
+24.5,"The undiscover’d country, from whose bourn",5,the UN dis COVER'D coun TRY from WHOSE bourn,-+-+-+-+-,---++--++,5,15,9,6,2,4,2,8,0,0,0,6,1,2,0,0,5,20
+25.1,"No traveller returns, puzzles the will,",1,no TRA vel LER re TURNS.PUZ zles THE will,-+-+-++-+-,++---++---,4,13,10,6,1,7,2,11,0,0,1,3,0,3,0,0,5,24
+25.2,"No traveller returns, puzzles the will,",2,NO.TRA vel LER re TURNS.PUZ zles THE will,++-+-++-+-,++---++---,4,13,10,6,0,7,2,11,0,0,2,3,0,3,0,0,5,24
+25.3,"No traveller returns, puzzles the will,",3,no TRA vel LER re TURNS puz.zles THE will,-+-+-+--+-,++---++---,5,15,10,6,2,7,2,11,0,0,0,3,1,3,0,0,5,24
+25.4,"No traveller returns, puzzles the will,",4,no TRA vel LER re TURNS puz ZLES the.will,-+-+-+-+--,++---++---,5,15,10,6,2,7,2,11,0,0,0,3,1,3,0,0,5,24
+25.5,"No traveller returns, puzzles the will,",5,no TRA vel LER re TURNS puz ZLES the WILL,-+-+-+-+-+,++---++---,6,18,10,6,2,7,3,11,0,0,0,3,1,3,0,0,5,24
+26.1,And makes us rather bear those ills we have,1,and MAKES us RAT her BEAR those ILLS we HAVE,-+-+-+-+-+,-+-+-+-+-+,0,0,10,9,0,0,0,1,0,0,0,0,0,0,0,0,3,1
+26.2,And makes us rather bear those ills we have,2,and MAKES us RAT her BEAR those ILLS we.have,-+-+-+-+--,-+-+-+-+--,0,0,10,9,0,0,0,1,0,0,0,0,0,0,0,0,3,1
+26.3,And makes us rather bear those ills we have,3,and MAKES us RAT her BEAR those ILLS we HAVE,-+-+-+-+-+,-+-+-+-+--,1,3,10,9,0,0,1,1,0,0,0,0,0,0,0,0,3,1
+27.1,Than fly to others that we know not of?,1,than FLY to OT hers THAT we KNOW not.of,-+-+-+-+--,-+-+-+-+--,0,0,10,9,0,0,0,1,0,0,0,0,0,0,0,0,2,1
+27.2,Than fly to others that we know not of?,2,than FLY to OT hers THAT we KNOW not OF,-+-+-+-+-+,-+-+-+-+--,1,3,10,9,0,0,1,1,0,0,0,0,0,0,0,0,2,1
+28.1,"Thus conscience does make cowards of us all,",1,thus CONS cience DOES make CO wards OF us ALL,-+-+-+-+-+,++-+++---+,3,9,10,8,2,8,1,8,0,0,0,8,0,0,0,0,7,24
+28.2,"Thus conscience does make cowards of us all,",2,thus CONS cience DOES make CO wards OF us.all,-+-+-+-+--,++-+++----,3,9,10,8,2,8,1,8,0,0,0,8,0,0,0,0,7,24
+28.3,"Thus conscience does make cowards of us all,",3,THUS.CONS cience DOES make CO wards OF us ALL,++-+-+-+-+,++-+++---+,3,9,10,8,1,8,1,8,0,0,1,8,0,0,0,0,7,24
+28.4,"Thus conscience does make cowards of us all,",4,THUS.CONS cience DOES make CO wards OF us.all,++-+-+-+--,++-+++----,3,9,10,8,1,8,1,8,0,0,1,8,0,0,0,0,7,24
+28.5,"Thus conscience does make cowards of us all,",5,THUS.CONS cience.does MAKE.CO wards OF us ALL,++--++-+-+,++--++---+,4,13,10,8,0,8,1,8,0,0,3,8,0,0,0,0,7,24
+28.6,"Thus conscience does make cowards of us all,",6,THUS.CONS cience.does MAKE.CO wards OF us.all,++--++-+--,++--++----,4,13,10,8,0,8,1,8,0,0,3,8,0,0,0,0,7,24
+28.7,"Thus conscience does make cowards of us all,",7,thus CONS cience DOES make CO wards OF us ALL,-+-+-+-+-+,++-+++----,4,13,10,8,2,8,2,8,0,0,0,8,0,0,0,0,7,24
+29.1,And thus the native hue of resolution,1,and THUS the NA tive HUE of RE so LU tion,-+-+-+-+-+-,-+-+-+-+-+-,0,0,11,7,0,0,0,1,0,0,0,0,0,0,0,0,2,1
+29.2,And thus the native hue of resolution,2,and THUS the NA tive HUE of RE so LU.TION,-+-+-+-+-++,-+-+-+-+-+-,1,3,11,7,0,0,1,1,0,0,0,0,0,0,0,0,2,1
+30.1,"Is sicklied o’er with the pale cast of thought,",1,is SIC klied O'ER with.the PALE.CAST of THOUGHT,-+-+--++-+,-+----++-+,2,6,10,9,0,2,1,5,0,0,1,1,0,0,0,0,3,8
+30.2,"Is sicklied o’er with the pale cast of thought,",2,is SIC klied O'ER with THE pale CAST of THOUGHT,-+-+-+-+-+,-+----++-+,3,9,10,9,1,2,2,5,0,0,0,1,0,0,0,0,3,8
+30.3,"Is sicklied o’er with the pale cast of thought,",3,is SIC.KLIED o'er.with THE pale CAST of THOUGHT,-++--+-+-+,-+----++-+,3,9,10,9,1,2,2,5,0,0,0,1,0,0,0,0,3,8
+31.1,"And enterprises of great pith and moment,",1,and EN ter PRI ses OF great PITH and MO ment,-+-+-+-+-+-,-+-+--++-+-,2,6,11,7,1,6,1,8,0,2,0,5,0,2,0,0,6,23
+31.2,"And enterprises of great pith and moment,",2,and EN ter PRI ses.of GREAT.PITH and MO ment,-+-+--++-+-,-+-+--++-+-,2,6,11,7,0,6,0,8,0,2,2,5,0,2,0,0,6,23
+31.3,"And enterprises of great pith and moment,",3,and EN ter PRI.SES of GREAT.PITH and MO ment,-+-++-++-+-,-+-+--++-+-,3,8,11,7,0,6,1,8,1,2,1,5,0,2,0,0,6,23
+31.4,"And enterprises of great pith and moment,",4,and EN ter PRI ses OF great PITH and MO.MENT,-+-+-+-+-++,-+-+--++-+-,4,12,11,7,1,6,2,8,1,2,0,5,0,2,0,0,6,23
+31.5,"And enterprises of great pith and moment,",5,and EN ter PRI ses.of GREAT pith AND mo MENT,-+-+--+-+-+,-+-+--++-+-,6,18,11,7,2,6,2,8,0,2,1,5,1,2,0,0,6,23
+31.6,"And enterprises of great pith and moment,",6,and EN ter PRI ses OF great PITH and.mo MENT,-+-+-+-+--+,-+-+--++-+-,6,17,11,7,2,6,2,8,0,2,1,5,1,2,0,0,6,23
+32.1,With this regard their currents turn awry,1,with THIS re GARD their CUR rents TURN aw RY,-+-+-+-+-+,---+-+-+-+,1,3,10,7,0,4,1,10,0,1,0,2,0,3,0,0,6,20
+32.2,With this regard their currents turn awry,2,with.this RE.GARD their CUR rents TURN aw RY,--++-+-+-+,---+-+-+-+,2,6,10,7,0,4,1,10,1,1,0,2,0,3,0,0,6,20
+32.3,With this regard their currents turn awry,3,WITH this.re GARD their CUR rents TURN aw RY,+--+-+-+-+,---+-+-+-+,2,6,10,7,0,4,1,10,0,1,1,2,0,3,0,0,6,20
+32.4,With this regard their currents turn awry,4,WITH.THIS re GARD their CUR rents TURN aw RY,++-+-+-+-+,---+-+-+-+,3,8,10,7,0,4,2,10,0,1,1,2,0,3,0,0,6,20
+32.5,With this regard their currents turn awry,5,with THIS re GARD their CUR.RENTS turn AW ry,-+-+-++-+-,---+-+-+-+,6,18,10,7,2,4,3,10,0,1,0,2,1,3,0,0,6,20
+32.6,With this regard their currents turn awry,6,with.this RE gard THEIR cur.rents TURN aw RY,--+-+--+-+,---+-+-+-+,6,17,10,7,2,4,2,10,0,1,0,2,2,3,0,0,6,20
+33.1,"And lose the name of action. Soft you now,",1,and LOSE the NAME of AC tion SOFT you NOW,-+-+-+-+-+,-+-+-+-+-+,0,0,10,9,0,3,0,3,0,1,0,2,0,0,0,0,4,9
+33.2,"And lose the name of action. Soft you now,",2,and LOSE the NAME of AC tion SOFT you.now,-+-+-+-+--,-+-+-+-+-+,2,5,10,9,1,3,0,3,0,1,1,2,0,0,0,0,4,9
+33.3,"And lose the name of action. Soft you now,",3,AND.LOSE the NAME of AC tion SOFT you NOW,++-+-+-+-+,-+-+-+-+-+,2,6,10,9,0,3,1,3,0,1,1,2,0,0,0,0,4,9
+33.4,"And lose the name of action. Soft you now,",4,and LOSE the NAME of AC.TION soft YOU now,-+-+-++-+-,-+-+-+-+-+,5,15,10,9,2,3,2,3,1,1,0,2,0,0,0,0,4,9
+34.1,"The fair Ophelia! Nymph, in thy orisons",1,the FAIR op HE lia NYMPH in.thy O ri SONS,-+-+-+--+-+,-+-+-+--+--,1,3,11,7,0,1,1,4,0,1,0,0,0,1,0,0,4,7
+34.2,"The fair Ophelia! Nymph, in thy orisons",2,the FAIR op HE lia NYMPH in.thy O ri.sons,-+-+-+--+--,-+-+-+--+--,1,3,11,7,0,1,0,4,1,1,0,0,0,1,0,0,4,7
+34.3,"The fair Ophelia! Nymph, in thy orisons",3,the FAIR op HE lia NYMPH in.thy O.RI sons,-+-+-+--++-,-+-+-+--+--,1,3,11,7,0,1,1,4,0,1,0,0,0,1,0,0,4,7
+34.4,"The fair Ophelia! Nymph, in thy orisons",4,the FAIR op HE lia NYMPH in THY o RI sons,-+-+-+-+-+-,-+-+-+--+--,4,12,11,7,1,1,2,4,0,1,0,0,1,1,0,0,4,7
+35.1,Be all my sins remember’d.,1,be ALL my SINS re MEMBER'D,-+-+-+,-+-+-+,0,0,6,5,0,0,0,0,0,0,0,0,0,0,0,0,2,0
+35.2,Be all my sins remember’d.,2,BE all.my SINS re MEMBER'D,+--+-+,+--+-+,0,0,6,5,0,0,0,0,0,0,0,0,0,0,0,0,2,0

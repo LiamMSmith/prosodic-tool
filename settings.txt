@@ -36,5 +36,5 @@ output_file = output.csv
 include_sums = True
 MU = True
 MTS = True
-collapse_parses = True
+collapse_parses = False
 include_norms = False
