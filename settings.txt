@@ -1,8 +1,8 @@
 ###################### Input ######################
 
 # input text
-text = Making a famine where abundance lies
-input_file = text.txt
+text = None
+input_file = hamlet.txt
 respect_new_lines = True
 
 # metrical constraints
@@ -13,7 +13,7 @@ unres_across = True
 s_trough = False
 w_peak = True
 
-# additional constraints
+# foot constraints
 max_s = 2
 max_w = 2
 foot_size = True
@@ -22,14 +22,14 @@ foot_size = True
 meter = None
 pentameter = False
 
-resolve_optionality = True
-exhaustive = False
-
 # sentence processing preferences
-min_syllables = 7
-max_syllables = 10
+min_syllables = 0
+max_syllables = 15
 window = middle
 
+# additional settings
+resolve_optionality = True
+exhaustive = False
 
 ###################### Output ######################
 output_file = output.csv

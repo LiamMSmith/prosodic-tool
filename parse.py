@@ -241,7 +241,7 @@ def process_text(settings):
             selected_words = word_tokens[start_idx:end_idx]
             new_line_text = ' '.join(selected_words)
         else:
-            new_line_text = line_text
+            new_line_text = ' '.join(word_tokens)
 
         processed_lines.append(new_line_text)
 
@@ -297,6 +297,9 @@ def run_parse(settings, output_csv):
                 parsed_line = parse.line or prosodic.Line(line_text)
                 resd = parse.stats_d()
                 # html = parsed_line.to_html(parse=parse, blockquote=False, as_str=True, tooltip=True)
+
+                for wordtoken in parse.wordtokens:
+                    print (wordtoken.txt)
 
                 row = [
                     getattr(getattr(parsed_line, "stanza", None), "num", ""),
@@ -456,7 +459,17 @@ def main(cmd_output_file=None):
         with open(output_file, 'w') as f:
             pass
 
-    processed_df.to_csv(output_file, index=False)
+    # Write output based on file extension
+    _, ext = os.path.splitext(output_file)
+    ext = ext.lower()
+
+    if ext == ".xlsx":
+        processed_df.to_excel(output_file, index=False)
+    elif ext == ".csv":
+        processed_df.to_csv(output_file, index=False)
+    else:
+        raise ValueError("Unsupported file extension. Please use '.csv' or '.xlsx'.")
+
     print(f"📁 Output written to: {output_file}")
 
 
