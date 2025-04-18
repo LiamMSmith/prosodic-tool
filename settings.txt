@@ -3,7 +3,7 @@
 # input text
 text = None
 input_file = hamlet.txt
-respect_new_lines = True
+verse = True
 
 # metrical constraints
 w_stress = True

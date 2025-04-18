@@ -42,7 +42,7 @@ def read_input_file(filename):
 
     int_keys = {"max_s", "max_w", "min_syllables", "max_syllables"}
     bool_keys = {
-        "exhaustive", "resolve_optionality", "respect_new_lines", "pentameter",
+        "exhaustive", "resolve_optionality", "verse", "pentameter",
         "include_sums", "MU", "MTS", "collapse_parses", "include_norms", *constraint_keys
     }
     str_keys = {"text", "input_file", "window", "output_file", "meter"}
@@ -122,7 +122,7 @@ def process_text(settings):
     window = settings.get("window", "beginning")
 
     def split_into_sentences(text_block):
-        if settings.get("respect_new_lines", False):
+        if settings.get("verse", False):
             split_pattern = r'[\n]+'
         else:
             split_pattern = r'[.?!;\[\]]+'
