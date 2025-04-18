@@ -156,8 +156,6 @@ def process_text(settings):
 
     processed_lines = []
     skipped_count = 0
-    for line in lines_to_parse:
-        print(line)
 
     for i, original_line_text in enumerate(lines_to_parse):
         # Tokenize the line into words (alphanumeric + apostrophes)

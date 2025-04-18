@@ -1,8 +1,8 @@
 ###################### Input ######################
 
 # input text
-text = None
-input_file = hamlet.txt
+text = When forty winters shall beseige thy brow.
+input_file = None
 verse = True
 
 # metrical constraints
