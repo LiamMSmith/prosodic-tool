@@ -298,6 +298,7 @@ def run_parse(settings, output_csv):
                 # html = parsed_line.to_html(parse=parse, blockquote=False, as_str=True, tooltip=True)
 
                 row = [
+                    parse.is_bounded,
                     input_index,
                     getattr(getattr(parsed_line, "stanza", None), "num", ""),
                     getattr(parsed_line, "num", ""),
@@ -324,7 +325,7 @@ def run_parse(settings, output_csv):
 
     # Header construction
     base_cols = [
-        "input_index", "stanza_num", "line_num", "line_txt", "parse_rank",
+        "is_bounded", "input_index", "stanza_num", "line_num", "line_txt", "parse_rank",
         "parse_txt", "parse_meter", "parse_stress",
         "parse_score", "parse_num_viols",
         "parse_ambig", "parse_num_sylls", "parse_num_words"
@@ -334,11 +335,15 @@ def run_parse(settings, output_csv):
     header = base_cols + constraint_cols + norm_constraint_cols + ["source_text"]
 
     final_df = pd.DataFrame(all_rows, columns=header)
+    
+    if "is_bounded" in final_df.columns:
+        final_df = final_df[~final_df["is_bounded"]]
+
 
     # Get unique line_texts that contributed to parses
     parsed_lines_count = len(set(row[-1] for row in all_rows))
 
-    print(f"✅ Parsed {parsed_lines_count} line(s) → {len(all_rows)} parse(s) total, skipped {skipped_count} line(s).")
+    print(f"✅ Parsed {parsed_lines_count} line(s) → {len(final_df)} parse(s) total, skipped {skipped_count} line(s).")
     return final_df
 
 
@@ -347,6 +352,7 @@ def process_output(df, settings):
     from collections import defaultdict
 
     df = df.copy()
+
     constraint_cols = [col for col in df.columns if col.startswith("*")]
 
     # --- MU (number of parses) ---
@@ -405,7 +411,7 @@ def process_output(df, settings):
         "stanza_num", "line_num", "parse_ambig", "parse_is_bounded",
         "*total_sylls", "*total_sylls_sum", "*total", "*total_sum", 
         "*total_sylls_norm", "source_text", "*total_sylls_norm_sum", 
-        "*total_norm", "*total_norm_sum", "*foot_size", "*foot_size_sum"
+        "*total_norm", "*total_norm_sum", "*foot_size", "*foot_size_sum", "is_bounded"
     ]
     df = df.drop(columns=[col for col in cols_to_remove if col in df.columns], errors="ignore")
 
