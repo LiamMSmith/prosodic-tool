@@ -1,7 +1,7 @@
 ###################### Input ######################
 
 # input text
-text = When forty winters shall beseige thy brow.
+text = When forty winters shall beseige thy brow
 input_file = None
 verse = True
 
