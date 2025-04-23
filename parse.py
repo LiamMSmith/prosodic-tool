@@ -357,7 +357,7 @@ def process_output(df, settings):
 
     # --- MU (number of parses) ---
     if settings.get("MU"):
-        df["MU"] = df.groupby("source_text")["input_index"].transform("count")
+        df["MU"] = df.groupby("input_index")["input_index"].transform("count")
 
     # --- MTS (sum of all violations) ---
     if settings.get("MTS"):
@@ -383,7 +383,7 @@ def process_output(df, settings):
     if settings.get("include_sums"):
         for col in constraint_cols:
             sum_col = f"{col}_sum"
-            df[sum_col] = df.groupby("source_text")[col].transform("sum")
+            df[sum_col] = df.groupby("input_index")[col].transform("sum")
 
         # --- Reorder *_sum columns next to their base columns ---
         cols = df.columns.tolist()
@@ -410,7 +410,7 @@ def process_output(df, settings):
     cols_to_remove = [
         "stanza_num", "line_num", "parse_ambig", "parse_is_bounded",
         "*total_sylls", "*total_sylls_sum", "*total", "*total_sum", 
-        "*total_sylls_norm", "source_text", "*total_sylls_norm_sum", 
+        "*total_sylls_norm", "source_text", "*total_sylls_norm_sum", "parse_num_viols",
         "*total_norm", "*total_norm_sum", "*foot_size", "*foot_size_sum", "is_bounded"
     ]
     df = df.drop(columns=[col for col in cols_to_remove if col in df.columns], errors="ignore")
